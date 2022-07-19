@@ -1,0 +1,52 @@
+@import "./common-scss/variables.scss";
+
+@mixin button{
+    font-family: $muli-semibold;
+    color: $white-color;
+    border-radius: 10px;
+    background: $primary-color;
+    border:0;
+    cursor: pointer;
+}
+body {
+  margin: 0;
+  color: $dark-color;
+  font-family: $muli-normal;
+  font-size: $font-size-16;
+}
+* {
+  box-sizing: border-box;
+}
+
+// common css
+.dark-gunmental{
+  color: $dark-gunmental;
+}
+.semi-bold{
+  font-family: $muli-semibold;
+}
+input[type="text"]:focus-visible, input[type="number"]:focus-visible {
+  outline: 0;
+}
+.blue--button{
+    @include button;
+    @include phone-only{
+      padding: 8px 15px;
+    }
+    @include min769x{
+      padding: 8px 55px;
+    }
+}
+.transparent--button{
+  @include button;
+  background-color: transparent;
+  color: $primary-color;
+    border: 2px solid $primary-color;
+    @include phone-only{
+      padding: 8px 15px;
+    }
+    @include min769x{
+      padding: 8px 55px;
+    }
+}
+

@@ -1,0 +1,86 @@
+@import './../../common-scss/variables.scss';
+
+.home--shop--devices{
+    .home--shop--devices_banner{
+        overflow-x: hidden;
+        img{
+            height: 100%;
+            @include phone-only{
+                outline-offset: 0px;
+                outline: 0px solid $white-color;
+            }
+            @include min769x{
+                outline-offset: -10px;
+                outline: 10px solid $white-color;
+            }
+        }
+    }
+    .home--shop--devices_text{
+        position: relative;
+        @include phone-only{
+            text-align: center;
+        }
+        @include min769x{
+            text-align: left;
+        }
+        article{
+            display: $display-flex;
+            justify-content: $t-align-center;
+            align-items: $t-align-center;
+            height: 340px;
+            background-color: $dark-color;
+            color: $white-color;
+            @include phone-only{
+                width: 95%;
+                margin: -25px auto 0 auto;
+            }
+            @include min769x{
+                width: 100%;
+                margin: initial;
+            }
+        }
+        .home--shop--devices__row {
+            width: 80%;
+            .transparent--button--mod{
+                color: $white-color;
+                border-color: $white-color;
+                margin-top: 20px;
+            }
+            h2{
+                margin: 0;
+                @include phone-only{
+                    font-size: $font-size-36;
+                    line-height: 40px;
+                }
+                @include min1200{
+                    font-size: $font-size-48;
+                    line-height: 54px;
+                }
+            }
+            .home--shop--devices__row_subtitle{
+                font-size: $font-size-20;
+                font-family: $muli-semibold;
+                margin: 15px 0;
+            }
+        }
+        .home--shop--devices__row__location {
+            border-bottom: 5px solid $primary-color;
+            width: 55px;
+            text-align: $t-align-center;
+            position: $position-absolute;
+            @include phone-only{
+                bottom: initial;
+                left: 41px;
+                top: -45px;
+            }
+            @include min769x{
+                bottom: 36px;
+                left: -28px;
+                top: initial;
+            }
+            img{
+                width: 30px;
+            }
+        }
+    }
+}    

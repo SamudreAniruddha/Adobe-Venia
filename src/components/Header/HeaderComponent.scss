@@ -1,0 +1,210 @@
+@import './../../common-scss/variables.scss';
+
+
+header {
+    background-color: $primary-color;
+    .inner-wrapper{
+        height: 80px;
+        display: $display-flex;
+        vertical-align: middle;
+        align-items: $t-align-center;
+        .desktop{
+            width: 100%;
+            @include phone-only{
+                display: $display-none;
+            }
+            @include tablet-portrait{
+                display: $display-block;
+            }
+            .desktop__menu {
+                @include middle-center;
+                @include phone-only{
+                    height: 56px;
+                }
+                @include tablet-portrait{
+                    height: 80px;
+                }
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        list-style: none;
+                        display: inline-block;
+                        cursor: pointer;
+                    padding: 0 15px;
+                    color: $white-color;
+                    font-family: $muli-semibold;
+                    position: relative;
+                        &.active:after{
+                            content: "";
+                            position: absolute;
+                            width: 84%;
+                            height: 7px;
+                            background: #fff;
+                            top: 43px;
+                            left: 8%;
+                        }
+                    }
+                }
+            }
+        }
+        .mobile-view{
+            width: 100%;
+            .menuicon {
+                display: $display-flex;
+                align-items: $t-align-center;
+                @include phone-only{
+                    height: 56px;
+                }
+                @include tablet-portrait{
+                    height: 80px;
+                }
+                img{
+                    cursor: pointer;
+                }
+            }
+            .right--nav{
+                display: $display-flex;
+                justify-content: right;
+                align-items: $t-align-center;
+                @include phone-only{
+                    height: 56px;
+                }
+                @include tablet-portrait{
+                    height: 80px;
+                }
+            }
+            @include phone-only{
+                display: $display-block;
+            }
+            @include tablet-portrait{
+                display: $display-none;
+            }
+        }  
+        .logo {
+            font-size: 32px;
+            display: $display-flex;
+            align-items: $t-align-center;
+            
+            @include phone-only{
+                height: 56px;
+                justify-content: center;
+            }
+            @include tablet-portrait{
+                height: 80px;
+            }
+            @include min769{
+                text-align: left;
+            }
+        }
+        @include phone-only{
+            .menu--mobile{
+                display: $display-none;
+            }
+            .menu--mobile.show--lightbox{
+                display: $display-block;
+            }
+            .menu--mobile.hide-lightbox{
+                display: $display-none;
+            }
+        }
+        .menu--mobile {
+            position: fixed;
+            width: 100%;
+            padding: 0;
+            transition: 0.3s all ease;
+            z-index: 1000;
+            height: 100vh;
+            background: $white-color;
+            top: 0;
+            left: 0;
+            .categories ul{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        text-decoration: none;
+                        display: $display-block;
+                        padding: 10px 0px;
+                        border-bottom: 1px solid #ccc;
+                        margin-left: 20px;
+                        margin-right: 20px;
+                        cursor: pointer;
+                    }
+                 
+            }
+            .menu__title {
+                background-color: #FAFAFA;
+                display: $display-block;
+                height: 48px;
+                color: $dark-color;
+                z-index: 1;
+                padding: 10px 20px;
+                font-size: 16px;
+                border-bottom: 1px solid #ddd;
+                span.cross {
+                    float: right;
+                    padding-right: 20px;
+                    cursor: pointer;
+                }
+            }
+          }
+          .menu--mobile.open {
+            left: 0px;
+          }
+
+          .right--nav{
+            text-align: right;
+            .right--nav__carticon{
+                background: $b-transparent;
+                border: 0;
+                cursor: pointer;
+                position: relative;
+                img{
+                    width: 35px;
+                }
+                span{
+                    position: $position-absolute;
+                    top: 5px;
+                    left: 26px;
+                    color: $white-color;
+                }
+            }
+            @include phone-only{
+                a {
+                    margin-right: 10px;
+                    font-family: $muli-semibold;
+                    img{
+                        width: 20px;
+                    }
+                }
+                a:last-child{
+                    margin-right: 0px;
+                }
+            } 
+            @include min769{
+                display: $display-flex;
+                justify-content: right;
+                height: 80px;
+                align-items: $t-align-center;
+                a{
+                    display: $display-flex;
+                    align-items: $t-align-center;
+                    margin-right: 5px;
+                    text-decoration: none;
+                    color: $white-color;
+                    span{
+                        padding-left:8px;
+                    }
+                }
+            }   
+            @include tablet-landscape{
+                a{
+                    margin-right: 15px;
+                }
+            }
+          }
+          .desktop__menu__mycart{
+            text-shadow: 0px 1px 0px $primary-color;
+          }
+    }
+}

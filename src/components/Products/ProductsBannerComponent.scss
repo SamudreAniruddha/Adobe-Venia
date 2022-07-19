@@ -1,0 +1,103 @@
+@import './../../common-scss/variables.scss';
+
+.products--banner {
+    @include tablet-portrait{
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 200px;
+        overflow-y: hidden;
+      }
+      @include tablet-landscape{
+        height: 250px;
+    }
+      @include min1200{
+        height: 300px;
+      }
+        .products--banner__image{
+                display: $display-block;
+                overflow: hidden;
+                @include phone-only{
+                    border-top: 0px;
+                    border-bottom: 0px;
+                    img{ 
+                        display: $display-none;
+                    }
+                    height: 190px;
+                    background-image: url(../../assets/images/banner.jpg);
+                    display: $display-block;
+                    background-position: 90% 33%;
+                }
+                @include tablet-portrait{
+                    height: 200px;
+                    border-top: 10px solid $white-color;
+                    border-bottom: 10px solid $white-color;
+                }
+                @include tablet-landscape{
+                    height: 250px;
+                }
+                @include min1200{
+                    height: 300px;
+                }
+             img {
+                width: 100%;
+            }
+        }    
+        .products--banner__text {
+            width: 92%;
+            @include phone-only{
+                height: 160px;
+            }
+            background: $dark-gunmental;
+            margin: -62px auto 0 auto;
+            @include middle-center;
+            @include tablet-portrait{
+                width: 100%;
+                margin: 0px;
+                height: 200px;
+            }
+            @include tablet-landscape{
+                height: 250px;
+            }
+            @include min1200{
+                height: 300px;
+            }
+            h4 {
+                color: $white-color;
+                margin: -28px 0 0px 0;
+                padding: 0;
+                font-size: $font-size-36;
+                line-height: 44px;
+                text-align: $t-align-center;
+                font-family: $muli-semibold;
+                position: $position-relative;
+                &::after{
+                    content: '';
+                    position: $position-absolute;
+                    width: 113px;
+                    height: 8px;
+                    background: $primary-color;
+                    bottom: -19px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .mobile-view{
+            @include phone-only{
+                display: $display-block;
+            }
+            @include min769{
+                display: $display-none;
+            }
+        } 
+        .desktop-view{
+            @include phone-only{
+                display: $display-none;
+            }
+            @include min769{
+                display: $display-block;
+            }
+        }
+}

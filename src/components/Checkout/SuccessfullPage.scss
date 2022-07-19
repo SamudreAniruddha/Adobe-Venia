@@ -1,0 +1,104 @@
+@import './../../common-scss/variables.scss';
+
+.successfull--page{
+    h4{
+        margin: 10px 0px 5px 0px;
+        font-family: $muli-semibold;
+    }
+    .order--heading{
+        font-family: $muli-semibold;
+        color: $dark-gunmental;
+        position: relative;
+       
+        &::after{
+            content: '';
+            width: 100px;
+            height: 12px;
+            border-bottom: 10px solid $primary-color;
+            position: absolute;
+            @include phone-only{
+                right: 93px;
+                top: 48px;
+            }
+            @include tablet-portrait{
+                right: 147px;
+                top: 69px;
+            }
+        }
+        @include phone-only{
+            font-size: $font-size-33;
+            margin: 10px auto 20px auto;
+            width: 282px;
+            text-align: $t-align-center;
+        }
+        @include tablet-portrait{
+            width: 404px;
+            font-size: $font-size-48;
+            margin: 20px auto 35px auto;
+        }
+    }
+    .order--number {
+        font-size: $font-size-20;
+        font-family: $muli-semibold;
+        margin-bottom: 7px;
+    }
+    .guest--checkout{
+        font-size: $font-size-20;
+        font-family: $muli-semibold;
+        margin: 28px 0px 15px 0px;
+    }
+    .shipping--information--edit div{
+        color: $gray;
+    }
+    .placed--items--information{
+        .placed--items{
+            padding:0;
+            border: 0;
+            img{
+                width: 30%;
+            }
+            .bag-product-details{
+                width: 70%;
+            }
+        }
+    }
+    .cart--advt {
+        height: 351px;
+        background-color: #47B5FF;
+        text-align: $t-align-center;
+        color: $white-color;
+        margin-top: 25px;
+        @include phone-only{
+           display: $display-none;
+        }
+        @include min769x{
+            width: 96%;
+            margin-left: 4%;
+            display: $display-block;
+        }
+        p{
+            height: 258px;
+            display: flex;
+            align-items: $t-align-center;
+            font-size: $font-size-36;
+            margin: 0;
+            padding: 0 43px;
+            line-height: 45px;
+            @include phone-only{
+                font-size: $font-size-36;
+            }
+            @include min769x{
+                font-size: $font-size-30;
+            }
+            @include min1200{
+                font-size: $font-size-36;
+            }
+        }
+        .facebook{
+            padding: 0px 25px;
+        }
+    }
+}
+.terms--conditions{
+    padding-top: 15px;
+}

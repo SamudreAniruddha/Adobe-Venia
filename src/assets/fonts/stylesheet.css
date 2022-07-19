@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Muli';
+    src: url('Muli.eot');
+    src: url('Muli.eot?#iefix') format('embedded-opentype'),
+        url('Muli.woff2') format('woff2'),
+        url('Muli.woff') format('woff'),
+        url('Muli.ttf') format('truetype'),
+        url('Muli.svg#Muli') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
